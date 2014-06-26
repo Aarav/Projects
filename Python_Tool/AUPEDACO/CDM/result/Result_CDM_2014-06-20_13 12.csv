@@ -1,0 +1,2 @@
+﻿MMddHHmmss,"Title","Sequential Read","Sequential Write","Random Read 512KB","Random Write 512KB","Random Read 4KB (QD=1)","[IOPS]","Random Write 4KB (QD=1)","[IOPS]","Random Read 4KB (QD=32)","[IOPS]","Random Write 4KB (QD=32)","[IOPS]","Test","Date","OS","Comment",
+0620131213,"CrystalDiskMark 3.0.2 x64 (C) 2007-2013 hiyohiyo","0.000","0.000","0.000","0.000","0.325","79.4","0.396","96.6","0.000","0.0","0.000","0.0","1000 MB [C: 39.3% (176.4/448.7 GB)] (x1)","2014/06/20 13:12:13","Windows 7 Home Premium Edition SP1 [6.1 Build 7601] (x64)","",

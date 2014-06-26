@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<SettingsMemo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <macroCode>-1</macroCode>
+  <queueTime>100</queueTime>
+  <intervalTrial>20</intervalTrial>
+  <shallUseAsciiComment>true</shallUseAsciiComment>
+  <shallUseLogComment>false</shallUseLogComment>
+  <batchPath />
+  <batchShallWait>false</batchShallWait>
+  <batchShallExecAdmin>false</batchShallExecAdmin>
+  <audioPath />
+</SettingsMemo>

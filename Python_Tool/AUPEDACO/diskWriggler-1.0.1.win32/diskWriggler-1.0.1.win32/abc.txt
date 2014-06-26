@@ -1,0 +1,6 @@
+Frame Resolution  : 1920 x 1080
+Bytes / Pixel     : 4,00 (padded) (10 bit, 4:4:4 sampling)
+Frame Size        : 8,294,400 bytes
+File Type         : One file per frame (4,147,200,000 bytes).
+
+Writing 500 x 8294400 byte frames in d:

@@ -1,0 +1,1 @@
+diskWriggler-1.0.1.win32>diskWriggler -PAL -n 1000 -o e:\ > c:\nas.txt

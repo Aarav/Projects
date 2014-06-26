@@ -1,0 +1,222 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>DiskMarkStream</title>
+<style type="text/css">
+<!--
+/* body */
+body {font-family: Segoe UI, Meiryo, Verdana, sans-serif; line-height: 1.4em; 
+background: rgb(234, 234, 234); padding: 0; margin: 0;}
+
+h1,h2,h3,p {font-weight: normal; padding: 0; margin: 0;}
+
+div#wrapper {margin: 0 auto; min-width: 640px; max-width: 820px;
+box-shadow: 0 0 8px rgb(144, 144, 144);}
+
+/* navigation bar */
+div#title {background: white; height: 70px; position: relative;}
+h1 {font-size: 44px; line-height: 44px; margin-top: -22px;
+position: absolute; top: 50%; left: 20px;}
+p#version {font-size: 16px; line-height: 16px; position: absolute; bottom: 24px; right: 10px;}
+p#date {font-size: 16px; line-height: 16px; position: absolute; bottom: 6px; right: 10px;}
+
+div#navigation {background: rgb(248, 248, 248); margin: 0; padding: 0 4px; overflow: auto;
+border-top: rgb(120, 120, 120) solid 1px; border-bottom: rgb(120, 120, 120) solid 1px;}
+
+div#navigation ul {list-style-type: none; margin: 0; padding: 0;}
+div#navigation li {font-size: 14px; padding: 0; margin: 4px 0 4px 0; float: left;}
+
+div#navigation li a:link,
+div#navigation li a:visited {color: black; background: rgb(248, 248, 248); 
+text-decoration: none; border: rgb(248, 248, 248) solid 1px; padding: 0 4px;}
+
+div#navigation li a:hover,
+div#navigation li a:active {color: black; background: rgb(194, 224, 255);
+text-decoration: none; border: rgb(51, 153, 255) solid 1px; padding: 0 4px;}
+
+/* main */
+div#main {background: white; padding: 8px 20px 10px 30px; margin: 0; clear: both;}
+
+h2 {font-size: 1.6em; line-height: 1.6em; margin: 20px 0 6px -14px;}
+h3 {font-size: 1.2em; margin: 12px 0 0 -8px;}
+
+p {margin:10px 0 0 0;}
+
+p.note,
+div.note {font-size: 1em; line-height: 1.3em; margin: 0.4em 0 0 2em;}
+span.note-head {font-weight: bold; color: rgb(70, 70, 70);}
+
+div#main ul,ol {margin-top: 0.6em;}
+div#main li {margin: 0 0 0.4em 0}
+
+table,th,td {border-collapse: collapse; border: 2px rgb(66,70,72) solid;}
+table {font-size: 0.95em; line-height: 1.25em; margin: 8px 0;}
+th {font-weight: normal; text-align: center; white-space: nowrap; background: rgb(222,234,248); padding: 5px; width: 80px;}
+td {padding: 5px; width: 80px;}
+td.head {white-space: nowrap; background: rgb(222,234,248);}
+
+a:link,
+a:visited {color: black; background: rgb(248, 248, 248);}
+
+a:hover,
+a:active {color: black; background: rgb(194, 224, 255);}
+
+/* footnote */
+div#footnote {background: rgb(248, 248, 248); height: 28px; padding: 6px 10px; margin: 0;
+border-top: rgb(120, 120, 120) solid 1px; position: relative;}
+p#home {font-size: 16px; line-height: 16px; position: absolute; top: 0; left: 10px;}
+p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10px;}
+-->
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="title">
+<h1>DiskMarkStream <span style="color: blue;">beta</span></h1>
+<p id="version">Ver.0.5.0</p>
+<p id="date">2013/9/1</p>
+</div><!-- end of title -->
+
+<div id="navigation">
+<ul>
+	<li><a href="#概要">概要</a></li>
+	<li><a href="#動作条件">動作条件</a></li>
+	<li><a href="#使い方">使い方</a></li>
+	<li><a href="#マクロファイルの作成">マクロファイルの作成</a></li>
+	<li><a href="#設定">設定</a></li>
+	<li><a href="#その他">その他</a></li>
+</ul>
+</div><!-- end of navigation -->
+
+<div id="main">
+
+<a id="概要"></a><h2 style="margin-top: 0;">1. 概要</h2>
+
+<p>DiskMarkStreamはhiyohiyoさん作の<a href="http://crystalmark.info/">CrystalDiskMark</a>（CDM）を自動実行させるマクロツールです。予め決められた設定に従ってCDMを開始し、各テストが終了すればスクリーンショットとログを保存して次のテストに進みます。この連続無人実行によりユーザーは様々な条件と複数のドライブでの計測を楽に行うことができます。</p>
+<p class="note"><span class="note-head">注意:</span> このソフトはEMOによるもので、CDMの作者であるhiyohiyoさんとは直接関係ありません。もしこのソフトに関するバグ報告、提案、要望その他の連絡事項があれば、EMOあてに送るようにお願いします。</p>
+
+<a id="動作条件"></a><h2>2. 動作条件</h2>
+
+<ul>
+	<li style="margin-bottom: 0;">CrystalDiskMark 3.0.2（Shizuku Editionを含む）</li>
+	<li style="margin-bottom: 0;">Windows 8.1 Preview, Windows 8、Windows 7及びWindows XP</li>
+	<li>.NET Framework 4.0</li>
+</ul>
+
+<a id="使い方"></a><h2>3. 使い方</h2>
+
+<ol>
+	<li>このソフトを起動し、[マクロを取り込む]を押してマクロファイルを指定します。すると、その内容が表に反映されます（表を直接編集はできません）。</li>
+	<li>CDMを起動し、ウィンドウ全体がデスクトップ内に表示されるようにします。CDMのウィンドウがこのソフトのウィンドウと重ならないようにしてください。</li>
+	<li>[計測に進む]を押すと、CDMに問題がなければ「CDMを確認しました。計測開始します。」というメッセージが出るので、[はい]を押します。</li>
+	<li>これで計測が始まり、このソフトの現在状態の表示が「待機中」と「カーソル使用中」を経て「計測中」に変わります。<span style="color: red;">「カーソル使用中」はカーソルを動かさないでください。</span>「待機中」と「計測中」にはカーソルを使って構いませんが、<span style="color: red;">「計測中」はCDMのウィンドウを動かさないように、かつ他のウィンドウで隠さないようにしてください</span>（隠されると終了判定ができなくなります）。基本的に無人実行用です。
+	<div style="margin-top: 10px;">途中で止めるときは[計測中断]を押してください（CDMを自動的に止めることはしません）。再開するには[再開に進む]を押してください。そのまま終了するには[計測終了]を押してください。</div>
+	</li>
+	<li>全テストが終了すれば、「計測終了」に変わります。CDMのスクリーンショットとログは「result」フォルダ内の以下のファイルに保存されます。
+	<table style="margin-bottom: 0;"><tbody>
+		<tr>
+			<td class="head">各テストのスクリーンショット</td>
+			<td>MMddHHmmss.png</td>
+		</tr>
+		<tr>
+			<td class="head">各テストのログ</td>
+			<td>MMddHHmmss.txt</td>
+		</tr>
+		<tr>
+			<td class="head">累積したログ</td>
+			<td>MMdd.txt</td>
+		</tr>
+		<tr>
+			<td class="head">累積したログをCSV形式に変換したもの</td>
+			<td>MMdd.csv</td>
+		</tr>		
+	</tbody></table>
+	(MM: 月, dd: 日, HH: 時, mm: 分, ss: 秒)
+	</li>
+</ol>
+
+<a id="マクロファイルの作成"></a><h2>4. マクロファイルの作成</h2>
+
+<p>マクロファイルの形式は標準的なCSV形式と同じなので、Excelなどの表計算ソフトで作成してCSVとして保存するのが楽です。項目の順番はこのソフトの表と同じで（左端の番号は除く）、各項目の値は以下のとおりです。</p>
+
+<table border="0"><tbody>
+	<tr>
+		<th>テスト<br>種類</th>
+		<th>テスト<br>回数</th>
+		<th>テスト<br>サイズ</th>
+		<th>テスト<br>ドライブ</th>
+		<th>テスト<br>データ</th>
+		<th style="width: 200px">コメント</th>
+	</tr>
+	<tr>
+		<td style="white-space: nowrap;">All<br>Seq<br>512K<br>4K<br>4K QD32</td>
+		<td>1-9</td>
+		<td>50<br>100<br>500<br>1000<br>2000<br>4000</td>
+		<td>CDMのプルダウンリストで表示される順番。</td>
+		<td>Random<br>0x00<br>0xFF</td>
+		<td style="width: 200px">最大64文字。初期設定では英数字記号（ASCIIコード）のみ使用可能です。この制限は設定で無効にできます。</td>
+	</tr>
+</tbody></table>
+
+<p>フィールドが空白の場合や、CDMにない設定になっていた場合には、デフォルト値が使われます。</p>
+<p>例えば、テスト種類をSeq、テスト回数を3、テストサイズを100MB、テストドライブを2番目のドライブ、テストデータをRandom（デフォルト）、コメントを「Drive test #1」とする場合、その行は以下のようになります。</p>
+
+<table><tbody>
+	<tr>
+		<td>Seq</td>
+		<td>3</td>
+		<td>100</td>
+		<td>2</td>
+		<td></td>
+		<td style="width: 200px">Drive test #1</td>
+	</tr>
+</tbody></table>
+
+<p>この内容は以下のテキストと同じです。</p>
+<p style="margin-left: 2em;">Seq, 3, 100, 2, , Drive test #1</p>
+<p>参考としては同梱のサンプルマクロ（samplemacro.csv）を見てください。</p>
+
+<a id="設定"></a><h2>5. 設定</h2>
+
+<p>設定ダイアログの項目の詳細です。</p>
+<ul>
+	<li>[動作待ち時間] : カーソル使用中にクリックなどの間に待つ時間（ミリ秒）。最短は100で、たいてはこれで十分だと思いますが、反応が追いついてない場合は長くしてください。最長は1000（1秒）です。</li>
+	<li>[テスト間隔] : テストの間におく時間（秒）。最短は10、最長は3600（1時間）です。</li>
+	<li>[マクロファイル] : 
+	<ul>
+		<li>[文字コードを指定する] : もしマクロファイルが正しく解釈されない場合は（日本語はまず問題ないはずですが）、正確な文字コードを指定してください。</li>
+		<li>[コメントにASCIIコードのみを使用する] : チェックを外すと、ASCIIコード以外の文字が使用可能になります。ただし、スクリーンショットとログの保存に時間がかかる場合があります。その場合、このソフトは1分まで待ちます。</li>
+	</ul>
+	</li>
+	<li>[テスト間に実行するバッチファイル] : テストの間にバッチファイルを実行できます。実行は各テストの直後に開始されます。
+	<ul>
+		<li>[バッチ実行の完了を待つ] : バッチ実行が完了するまで（次のテストまでの）「待機中」の時間を開始するのを待ちます。バッチ実行中は現在状態の表示が「バッチ実行中」になります。チェックしない場合、このソフトは次回の実行のときを除いてバッチ実行の行方には関知しません。もし前回の実行が終了していなければ、新たに実行を開始することはしません。</li>
+		<li>[管理者として実行する] : バッチファイルを管理者として実行します。ただし、このソフト自身が管理者に実行されている必要があります（バッチ実行の度に確認を求められるのを避けるため）。管理者に実行されていれば[有効]、そうでなければ[無効]と表示されます。</li>
+	</ul>
+	</li>
+	<li>[作成するログファイル] :
+	<ul>
+		<li>[コメントをファイル名に使う] : コメントがスクリーンショットとログのファイル名に使われます。もし同じコメントの場合、ファイルは上書きされますので注意してください。</li>
+	</ul>
+	</li>
+	<li>[全テスト終了時に再生する音楽ファイル] : 全テストの終了を知らせるために音楽ファイルを再生できます。再生できる音楽ファイルはMP3、WMA、WAV、MIDなどWindows Media Playerが再生できるものと同じです。再生しない場合は空のままにしてください。</li>
+</ul>
+
+<a id="その他"></a><h2>6. その他</h2>
+
+<p>このソフトは計測中、2秒おきにCDMのボタン画像の一部（30x30 pixels）を取得してハッシュ値を計算し、開始前のものと比較して終了判定します。計測中にストレージ上のファイルの読み書きはしません。したがって、CDMの計測結果に有意な影響を与えることはないだろうと思いますが、環境によるかもしれません。</p>
+<p>多言語対応について、言語ファイルを「language」フォルダに入れておけば、このソフトの起動時に認識され、選択可能になります。言語ファイルの形式については、英語版「English.lang」を参照してください。文字コードはUTF-8で、各項目は最大128文字です。</p>
+
+</div><!-- end of main -->
+
+<div id="footnote">
+<p id="home"><a href="http://sourceforge.net/projects/diskmarkstream/">Project Site</a> (at SourceForge.net)</p>
+<p id="sig">EMO emotom(atmark)pobox.com</p>
+</div><!-- end of footnote -->
+
+</div><!-- end of wrapper -->
+
+</body></html>

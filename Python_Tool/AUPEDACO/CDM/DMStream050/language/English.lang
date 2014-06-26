@@ -1,0 +1,72 @@
+﻿[Information]
+TRANSLATOR=EMO
+VERSION=0.5.0
+
+[Language]
+LANGUAGE=English
+CULTURE=en-US,
+FONT_FAMILY=Segoe UI
+
+[Menu]
+MENU_SETTINGS=Settings(&S)
+MENU_LANGUAGE=Language(&L)
+MENU_HELP=Help(&H)
+MENU_ABOUT=About *****
+
+[Status]
+STATUS_WAITING=Waiting
+STATUS_EXECUTING_BATCH=Executing Batch
+STATUS_USING_CURSOR=Using Cursor
+STATUS_TESTING=Testing
+STATUS_INTERRUPTED=Interrupted
+STATUS_FINISHED=Finished
+
+[Buttons]
+BUTTON_OK=OK
+BUTTON_CANCEL=Cancel
+BUTTON_BROWSE=Browse
+BUTTON_PROCEED_PROCEED=Proceed
+BUTTON_PROCEED_RESUME=Resume
+BUTTON_STOP_INTERRUPT=Interrupt
+BUTTON_STOP_FINISH=Finish
+BUTTON_IMPORT=Import macro file
+BUTTON_REFRESH=Refresh
+BUTTON_STOP_AUDIO=Stop audio
+
+[Trials List]
+TRIAL_ITEM=Type
+TRIAL_RUN=Run
+TRIAL_SIZE=Size
+TRIAL_DRIVE=Drive
+TRIAL_DATA=Data
+TRIAL_COMMENT=Comment
+
+[Messages]
+MESSAGE_MACRO=Unreadable macro file.
+MESSAGE_START=Confirmed CDM is up. Start test.
+MESSAGE_RESUME=Confirmed CDM is up. If CDM is currently testing, stop it before new test. If ready, resume test.
+MESSAGE_NO_CDM=NO CDM is up.
+MESSAGE_MULTIPLE_CDM=Multiple copies of CDM are up. Close the copies other than one for test.
+MESSAGE_CDM_HIDDEN=CDM is minimized or hidden by other window or runs off the desktop.
+MESSAGE_CDM_DPI=Can not obtain CDM location correctly because DPI of monitor containing CDM is different.
+MESSAGE_CDM_BUSY=CDM is currenly testing. Stop it before new test.
+MESSAGE_CANNOT_CAPTURE=Can not capture CDM image.
+MESSAGE_MANY_RETRY=Aborted test because too many retries to start test happened. Try making queue time longer.
+MESSAGE_CLIPBOARD=Could not get log because clipboard is not accessible.
+MESSAGE_NOT_ADMIN=Batch file is set to be run by administrator. To do so, do you restart this application as administrator?
+
+[Settings Dialog]
+SETTINGS_TITLE=Settings
+SETTINGS_QUEUE=Queue time
+SETTINGS_INTERVAL=Test interval
+SETTINGS_MACRO=Macro file
+SETTINGS_ENCODING=Specify text encoding
+SETTINGS_ASCII_COMMENT=Use only ASCII code in comment
+SETTINGS_BATCH_PATH=Batch file to be executed between tests
+SETTINGS_BATCH_WAIT=Wait for completion of batch execution
+SETTINGS_BATCH_ADMIN=Execute as administrator
+SETTINGS_ENABLED=Enabled
+SETTINGS_DISABLED=Disabled
+SETTINGS_LOG=Log file to be created
+SETTINGS_LOG_COMMENT=Use comment for file names
+SETTINGS_AUDIO_PATH=Audio file to be played when all tests finished

@@ -1,0 +1,222 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>DiskMarkStream</title>
+<style type="text/css">
+<!--
+/* body */
+body {font-family: Segoe UI, Meiryo, Verdana, sans-serif; line-height: 1.4em; 
+background: rgb(234, 234, 234); padding: 0; margin: 0;}
+
+h1,h2,h3,p {font-weight: normal; padding: 0; margin: 0;}
+
+div#wrapper {margin: 0 auto; min-width: 640px; max-width: 820px;
+box-shadow: 0 0 8px rgb(144, 144, 144);}
+
+/* navigation bar */
+div#title {background: white; height: 70px; position: relative;}
+h1 {font-size: 44px; line-height: 44px; margin-top: -22px;
+position: absolute; top: 50%; left: 20px;}
+p#version {font-size: 16px; line-height: 16px; position: absolute; bottom: 24px; right: 10px;}
+p#date {font-size: 16px; line-height: 16px; position: absolute; bottom: 6px; right: 10px;}
+
+div#navigation {background: rgb(248, 248, 248); margin: 0; padding: 0 4px; overflow: auto;
+border-top: rgb(120, 120, 120) solid 1px; border-bottom: rgb(120, 120, 120) solid 1px;}
+
+div#navigation ul {list-style-type: none; margin: 0; padding: 0;}
+div#navigation li {font-size: 14px; padding: 0; margin: 4px 0 4px 0; float: left;}
+
+div#navigation li a:link,
+div#navigation li a:visited {color: black; background: rgb(248, 248, 248); 
+text-decoration: none; border: rgb(248, 248, 248) solid 1px; padding: 0 4px;}
+
+div#navigation li a:hover,
+div#navigation li a:active {color: black; background: rgb(194, 224, 255);
+text-decoration: none; border: rgb(51, 153, 255) solid 1px; padding: 0 4px;}
+
+/* main */
+div#main {background: white; padding: 8px 20px 10px 30px; margin: 0; clear: both;}
+
+h2 {font-size: 1.6em; line-height: 1.6em; margin: 20px 0 6px -14px;}
+h3 {font-size: 1.2em; margin: 12px 0 0 -8px;}
+
+p {margin:10px 0 0 0;}
+
+p.note,
+div.note {font-size: 1em; line-height: 1.3em; margin: 0.4em 0 0 2em;}
+span.note-head {font-weight: bold; color: rgb(70, 70, 70);}
+
+div#main ul,ol {margin-top: 0.6em;}
+div#main li {margin: 0 0 0.4em 0}
+
+table,th,td {border-collapse: collapse; border: 2px rgb(66,70,72) solid;}
+table {font-size: 0.95em; line-height: 1.25em; margin: 8px 0;}
+th {font-weight: normal; text-align: center; white-space: nowrap; background: rgb(222,234,248); padding: 5px; width: 80px;}
+td {padding: 5px; width: 80px;}
+td.head {white-space: nowrap; background: rgb(222,234,248);}
+
+a:link,
+a:visited {color: black; background: rgb(248, 248, 248);}
+
+a:hover,
+a:active {color: black; background: rgb(194, 224, 255);}
+
+/* footnote */
+div#footnote {background: rgb(248, 248, 248); height: 28px; padding: 6px 10px; margin: 0;
+border-top: rgb(120, 120, 120) solid 1px; position: relative;}
+p#home {font-size: 16px; line-height: 16px; position: absolute; top: 0; left: 10px;}
+p#sig {font-size: 16px; line-height: 16px; position: absolute; top: 0; right: 10px;}
+-->
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="title">
+<h1>DiskMarkStream <span style="color: blue;">beta</span></h1>
+<p id="version">Ver.0.5.0</p>
+<p id="date">2013/9/1</p>
+</div><!-- end of title -->
+
+<div id="navigation">
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#requirements">Requirements</a></li>
+	<li><a href="#how to run">How to run</a></li>
+	<li><a href="#making macro file">Making macro file</a></li>
+	<li><a href="#settings">Settings</a></li>
+	<li><a href="#other">Other</a></li>
+</ul>
+</div><!-- end of navigation -->
+
+<div id="main">
+
+<a id="overview"></a><h2 style="margin-top: 0;">1. Overview</h2>
+
+<p>DiskMarkStream is an automatic macro tool specially designed for <a href="http://crystalmark.info/">CrystalDiskMark</a> (CDM) created by hiyohiyo. It will start CDM with predefined settings and at completion of each test, will save screenshot and log then move on to next test. This consecutive unattended operation will help user to test various conditions and multiple drives at ease.</p>
+<p class="note"><span class="note-head">Note:</span> This software is created by EMO having no direct relation with hiyohiyo, author of CDM. So if you have bug report, suggestion, request or any other message regarding this software, please send it to EMO.</p>
+
+<a id="requirements"></a><h2>2. Requirements</h2>
+
+<ul>
+	<li style="margin-bottom: 0;">CrystalDiskMark 3.0.2 (including Shizuku Edition)</li>
+	<li style="margin-bottom: 0;">Windows 8.1 Preview, Windows 8, Windows 7 and Windows XP</li>
+	<li>.NET Framework 4.0</li>
+</ul>
+
+<a id="how to run"></a><h2>3. How to run</h2>
+
+<ol>
+	<li>Start this software. Press [Import macro file] and specify a macro file. Then its content will be reflected to list (You CANNOT edit the list directly).</li>
+	<li>Start CDM and make its whole window visible inside the desktop. Be sure that CDM's window will not lap over this software's window.</li>
+	<li>Press [Proceed]. Unless there is any problem in CDM, a message saying "Confirmed CDM is up. Start testing." will pop up. So press [Yes].</li>
+	<li>Test will begin and status box of this software will turn to, through "Waiting" and "Using cursor", "Testing". <span style="color: red;">DO NOT move cursor during "Using cursor".</span> You can use cursor during "Waiting" and "Testing" but <span style="color: red;">during "Testing", NEVER move CDM's window nor hide it by other window</span> (If it happens, this software WILL NOT be able to determine when CDM finishes testing). This software is basically for unattended operation.
+	<div style="margin-top: 10px;">If you wish to interrupt testing, press [Interrupt] (It WILL NOT stop CDM automatically). To resume testing, press [Resume]. To end testing at this stage, press [Finish].</div>
+	</li>
+	<li>After CDM finished all tests, the status box will turn to "Finished". CDM's screenshot and log will be saved in the following files in "result" folder:
+	<table style="margin-bottom: 0;"><tbody>
+		<tr>
+			<td class="head">Screenshot of each test</td>
+			<td>MMddHHmmss.png</td>
+		</tr>
+		<tr>
+			<td class="head">Log of each test</td>
+			<td>MMddHHmmss.txt</td>
+		</tr>
+		<tr>
+			<td class="head">Accumulated log</td>
+			<td>MMdd.txt</td>
+		</tr>
+		<tr>
+			<td class="head">Accumulated log converted into csv format</td>
+			<td>MMdd.csv</td>
+		</tr>		
+	</tbody></table>
+	(MM: month, dd: day, HH: hour, mm: minute, ss: second)
+	</li>
+</ol>
+
+<a id="making macro file"></a><h2>4. Making macro file</h2>
+
+<p>The format of macro file is same as standard csv format. So, it is easy to make it with Excel or other spreadsheet software and save it as a csv file. The order of items is same as the list in this software's window (except number in far left). The values of respective items are as follows:</p>
+
+<table border="0"><tbody>
+	<tr>
+		<th>Test<br>Type</th>
+		<th>Number of<br>Test Runs</th>
+		<th>Test<br>Size</th>
+		<th>Test<br>Drive</th>
+		<th>Test<br>Data</th>
+		<th style="width: 200px">Comment</th>
+	</tr>
+	<tr>
+		<td style="white-space: nowrap;">All<br>Seq<br>512K<br>4K<br>4K QD32</td>
+		<td>1-9</td>
+		<td>50<br>100<br>500<br>1000<br>2000<br>4000</td>
+		<td>Ordinal number that CDM shows in drop-down list.</td>
+		<td>Random<br>0x00<br>0xFF</td>
+		<td style="width: 200px">Maximum length is 64 letters. By default, only alphanumeric symbols (ASCII code) is accepted. This limitation can be disabled in settings.</td>
+	</tr>
+</tbody></table>
+
+<p>If a field is left blank or there is no such setting in CDM, the default value will be used.</p>
+<p>For example, if test type is Seq, number of test runs is 3, test size is 100MB, test drive is 2nd one, test data is Random (default) and comment is "Drive test #1", the row will be like this:</p>
+
+<table><tbody>
+	<tr>
+		<td>Seq</td>
+		<td>3</td>
+		<td>100</td>
+		<td>2</td>
+		<td></td>
+		<td style="width: 200px">Drive test #1</td>
+	</tr>
+</tbody></table>
+
+<p>This content is identical to the following text:</p>
+<p style="margin-left: 2em;">Seq, 3, 100, 2, , Drive test #1</p>
+<p>See included sample macro file (samplemacro.csv) for reference.</p>
+
+<a id="settings"></a><h2>5. Settings</h2>
+
+<p>Details of items in Settings Dialog.</p>
+<ul>
+	<li>[Queue time] : A period of time (milliseconds) that this software will wait between clicking or other actions when using cursor. The shortest is 100. I think it will be enough for most cases but if response seems not to catch up, make it longer. The longest is 1000 (1 second).</li>
+	<li>[Test interval] : A period of time (seconds) between tests. The shortest is 10 and the longest is 3600 (1 hour).</li>
+	<li>[Macro file] : 
+	<ul>
+		<li>[Specify text encoding] : If a macro file seems not to be correctly interpreted, specify exact text encoding.</li>
+		<li>[Use only ASCII code in comment] : If unchecked, characters other than ASCII code will become usable in comment. However, it may take longer time to save screenshot and log. In such case, this software will wait up to 1 minute.</li>
+	</ul>
+	</li>
+	<li>[Batch file to be executed between tests] : A batch file can be executed between tests. It will start just after the end of each test.
+	<ul>
+		<li>[Wait for completion of batch execution] : This software will wait for the completion of batch execution before starting "Waiting" (for next test) period. During the batch execution, status box will show "Executing Batch". If unchecked, this software will not care for the fate of batch execution except next time of execution. If previous execution will not have exited, no new execution will be kicked off.</li>
+		<li>[Execute as administrator] : This software will execute the batch file as administrator, provided that this software itself is executed by administrator (To avoid being required for confirmation each time of batch execution). If executed by administrator, [Enabled] will be shown and if not, [Disabled] will be.</li>
+	</ul>
+	</li>
+	<li>[Log file to be created] :
+	<ul>
+		<li>[Use comment for file names] : Comment will be used to name screenshot and log files. Be aware that if the same comment, the files will be overwritten.</li>
+	</ul>
+	</li>
+	<li>[Audio file to be played when all tests finished] : This software can play back audio file to nofity that all tests finished. Playable audio files are the same as those of Windows Media Player such as MP3, WMA, WAV, MID. If you don't want it, just leave it blank.</li>
+</ul>
+
+<a id="other"></a><h2>6. Other</h2>
+
+<p>This software will get partial image (30x30 pixels) of CDM's button and calculate its hash code every 2 seconds during testing. The code will be compared with that saved before testing so as to determine whether CDM finishes all tests. No file on storage will be red or written during testing. Therefore, I do not think it will make any significant difference in CDM's results. However, it might change case by case.</p>
+<p>Regarding multi-language, storing a language file in "language" folder will let this software to detect the file at its startup and make it selectable. As for the format of language file, refer to English version "English.lang". The text encoding is UTF-8 and the maximum length of expression of each item is 128 letters.</p>
+
+</div><!-- end of main -->
+
+<div id="footnote">
+<p id="home"><a href="http://sourceforge.net/projects/diskmarkstream/">Project Site</a> (at SourceForge.net)</p>
+<p id="sig">EMO emotom(atmark)pobox.com</p>
+</div><!-- end of footnote -->
+
+</div><!-- end of wrapper -->
+
+</body></html>
